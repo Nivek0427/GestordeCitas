@@ -2,14 +2,14 @@ import "./App.css";
 import { useState } from "react";
 import AppoinmentForm from "./components/AppoinmentForm";
 import AppoinmentList from "./components/AppoinmentList";
-//import AppoinmentDetail from "./components/AppoinmentDetail";
+import AppoinmentDetail from "./components/AppoinmentDetail";
 
 function App() {
   const [appoinments, setAppoinments] = useState([]);
   const [selectedAppoinment, setSelectedAppoinment] = useState(null);
 
   const addAppoinment = (appoinment) => {
-    setAppoinments([...appoinments, { ...appoinment, id: Date.now() }]);
+    setAppoinments([{ ...appoinment, id: Date.now() }, ...appoinments]);
   };
 
   const deleteAppoinment = (id) => {
@@ -28,12 +28,12 @@ function App() {
         onDelete={deleteAppoinment}
         onDetail={setSelectedAppoinment}
       />
-      {/*
+      
       {selectedAppoinment && (<AppoinmentDetail
           appoinment={selectedAppoinment}
           onClose={() => setSelectedAppoinment(null)}
       />
-      )}*/}
+      )}
     </>
   );
 }
