@@ -1,0 +1,40 @@
+.card {
+  background-color: #e3f0f7;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 1.5rem;
+  width: 250px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+ margin-block: 1rem;
+}
+
+.h3 {
+  margin: 0 0 0.5rem;
+  color: #111;
+}
+
+.p {
+  margin: 0.3rem 0;
+  font-size: 0.95rem;
+}
+
+.buttons {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.button {
+  flex: 1;
+  background-color: #f1b600;
+  color: #000;
+  border-radius: 4px;
+  padding: 6px;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #e5a900;
+}
